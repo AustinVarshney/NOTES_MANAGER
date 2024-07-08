@@ -1,0 +1,22 @@
+.outerErrorDiv{
+    border: 1px solid black;
+    border-radius: 0.75rem;
+    margin: 1rem 5.5rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #d40000;
+    background-color: #ffd8d8;
+}
+
+.outerErrorDiv fa-triangle-exclamation{
+    display: flex;
+}
+
+@media (max-width: 375px){
+    .outerErrorDiv{
+        font-size: 1rem;
+    }
+}

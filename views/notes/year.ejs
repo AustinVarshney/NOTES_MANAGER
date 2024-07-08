@@ -1,0 +1,103 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    <div class="outerDiv">
+        
+        <div class="innerDiv">
+            <img class="notebookImg" src="https://cdn3.iconfinder.com/data/icons/education-209/64/book-note-paper-school-512.png" alt="Image Not Found">
+            <div>
+                <hr>
+                <h4 class="year">1<sup>st</sup> Year Notes</h4>
+                <% let year1 = 1 %>
+                <form action="/note/<%=year1%>">
+                    <button class="buttonVIEW">VIEW</button>
+                </form>
+            </div>
+        </div>
+        <div class="innerDiv">
+            <img class="notebookImg" src="https://cdn3.iconfinder.com/data/icons/education-209/64/book-note-paper-school-512.png" alt="Image Not Found">
+            <div>
+                <hr>
+                <h4 class="year">2<sup>nd</sup> Year Notes</h4>
+                <% let year2 = 2 %>
+                <form action="/note/<%=year2%>">
+                    <button class="buttonVIEW">VIEW</button>
+                </form>
+            </div>
+        </div>
+        <div class="innerDiv">
+            <img class="notebookImg" src="https://cdn3.iconfinder.com/data/icons/education-209/64/book-note-paper-school-512.png" alt="Image Not Found">
+            <div>
+                <hr>
+                <h4 class="year">3<sup>rd</sup> Year Notes</h4>
+                <% let year3 = 3 %>
+                <form action="/note/<%=year3%>">
+                    <button class="buttonVIEW">VIEW</button>
+                </form>
+            </div>
+        </div>
+        <div class="innerDiv">
+            <img class="notebookImg" src="https://cdn3.iconfinder.com/data/icons/education-209/64/book-note-paper-school-512.png" alt="Image Not Found">
+            <div>
+                <hr>
+                <h4 class="year">4<sup>th</sup> Year Notes</h4>
+                <% let year4 = 4 %>
+                <form action="/note/<%=year4%>">
+                    <button class="buttonVIEW">VIEW</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <footer class="footer">
+        <h3>Give your suggestions here.</h3>
+        <form method="post" action="/note" class="needs-validation" novalidate>
+            <div class="outerFooterDiv1">
+                <div class="form-floating innerFooterDiv1">
+                    <input type="text" placeholder="Name" name="name" class="name form-control" id="floatingName" required>
+                    <label for="floatingName">Name</label>
+                    <div class="invalid-feedback innermostFooterDiv">
+                        Please write your name
+                    </div>
+                </div>
+                <div class="form-floating innerFooterDiv1">
+                    <input type="text" placeholder="Faculty Number" name="faculty_Number" class="faculty_Number form-control" id="floatingNum" required>
+                    <label for="floatingNum">Faculty Number</label>
+                    <div class="invalid-feedback innermostFooterDiv">
+                        Please write your Faculty Number
+                    </div>
+                </div>
+            </div>
+            <div class="outerFooterDiv1">
+                <div class="form-floating innerFooterDiv1">
+                    <input type="text" placeholder="Branch" name="branch" class="branch form-control" id="floatingBranch" required>
+                    <label for="floatingBranch">Branch</label>
+                    <div class="invalid-feedback innermostFooterDiv">
+                        Please write your Branch
+                    </div>
+                </div>
+                <div class="innerFooterDiv1">
+                    <select name="year" class="year form-select">
+                        <option selected>Choose Your Current Studying Year</option>
+                        <option value="First Year">First Year</option>
+                        <option value="Second Year">Second Year</option>
+                        <option value="Third Year">Third Year</option>
+                        <option value="Fourth Year">Fourth Year</option>
+                    </select>
+                </div>
+            </div>
+            <div class="outerFooterDiv1">
+                <div class="form-floating innerFooterDiv2">
+                    <textarea name="suggestions" class="form-control" id="floatingArea" placeholder="Leave a suggestion here." required></textarea>
+                    <label for="floatingArea">Write Your Suggestions</label>
+                    <div class="invalid-feedback innermostFooterDiv">
+                        Suggestion is required.
+                    </div>
+                </div>
+            </div>
+            <div class="outerFooterDiv2">
+                <button class="footerButton btn btn-outline-info">Submit</button>
+            </div>
+        </form>
+    </footer>
+</body>
+</html>

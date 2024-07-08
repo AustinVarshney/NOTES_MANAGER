@@ -1,0 +1,50 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    <h2 id="h2Signup">SignUp Form</h2>
+    <form action="/signup" method="post" id="formSignup" class="needs-validation" novalidate>
+        <div class="outerSignupDiv1">
+            <div class="innerSignupDiv1 form-floating">
+                <input type="text" placeholder="Username" name="username" class="username form-control" id="floatingUsername" required>
+                <label for="floatingUsername">Username</label>
+                <div class="invalid-feedback">
+                    Please write your Username
+                </div>
+            </div>
+            <div class="innerSignupDiv1 form-floating">
+                <input type="password" placeholder="Password" name="password" class="password form-control" id="floatingPassword" required>
+                <label for="floatingPassword">Password</label>
+                <div class="invalid-feedback">
+                    Please write your Password
+                </div>
+            </div>
+        </div>
+        <div class="outerSignupDiv1">
+            <div class="innerSignupDiv1 form-floating">
+                <input type="text" placeholder="Branch" name="branch" class="branch form-control" id="floatingBranch" required>
+                <label for="floatingBranch">Branch</label>
+                <div class="invalid-feedback">
+                    Please write your Branch
+                </div>
+            </div>
+            <div class="innerSignupDiv1 form-floating">
+                <input type="text" placeholder="Year" name="year" class="Year form-control" id="floatingYear" required>
+                <label for="floatingYear">Year</label>
+                <div class="invalid-feedback">
+                    Please write your Year
+                </div>
+            </div>
+        </div>
+        <div class="outerSignupDiv2">
+            <div class="innerSignupDiv2 form-floating">
+                <input type="text" placeholder="Email" name="email" class="Email form-control" id="floatingEmail" required>
+                <label for="floatingEmail">name@gmail.com</label>
+                <div class="invalid-feedback">
+                    Please write your Email
+                </div>
+            </div>
+        </div>
+        <div>
+            <button class="btn btn-success btnSignup">Sign Up</button>
+        </div>
+    </form>
+</body>

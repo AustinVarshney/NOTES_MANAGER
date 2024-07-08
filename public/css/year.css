@@ -1,0 +1,119 @@
+body{
+    font-family: "Aleo", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+   font-style: normal;
+}
+
+.outerDiv{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 5px;
+}
+
+.notebookImg{
+    height: 18rem;
+    opacity: 0.9;
+}
+
+.notebookImg:hover{
+    opacity: 1;
+}
+
+.innerDiv{
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    text-align: center;
+    margin: 1.5rem 0 1.25rem 0;
+}
+
+.outerDiv .innerDiv div{
+    background-color: rgb(184, 184, 184);
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+.year{
+    margin-top: 16px;
+}
+
+.buttonVIEW{
+    margin-bottom: 0.75rem;
+    width: 8rem;
+    border-radius: 1rem;
+    background-color: #4D2969;
+    color: white;
+}
+
+.buttonVIEW:hover{
+    background-color: #813866;
+}
+
+.linkVIEW{
+    text-decoration: none;
+    color: white;
+}
+
+hr{
+    margin: 0px;
+}
+
+.footer{
+    background-color: #343434eb;
+    text-align: center;
+}
+
+.footer h3{
+    padding-top: 0.5rem;
+    font-size: 2.20rem;
+    color: whitesmoke;
+}
+
+.outerFooterDiv1{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 1rem;
+}
+
+.outerFooterDiv2{
+    display: flex;
+    justify-content: center;
+}
+
+.innerFooterDiv1{
+    width: 45%
+}
+
+.innerFooterDiv1 select{
+    margin-top: 0;
+    height: 58px;
+}
+
+.innerFooterDiv2{
+    width: 93.5%;
+}
+
+.innerFooterDiv2 #floatingArea{
+    height: 5.5rem;
+}
+
+.outerFooterDiv2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerButton{
+    margin-bottom: 1.2rem;
+    width: 45%;
+    text-align: center;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.innermostFooterDiv{
+    color: wheat;
+}

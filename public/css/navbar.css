@@ -1,0 +1,287 @@
+.outerNav{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #0c20b1;
+  height: 4.25rem;
+  background-color: #DADAFF;
+}
+
+#innerNavDiv1{
+  margin-left: 0.5rem;
+}
+
+#innerNavDiv1 a{
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+}
+
+@media(max-width: 370px){
+  #innerNavDiv1 a{
+      font-size: 1.2rem;
+  }
+}
+
+@media(max-width: 300px){
+  #innerNavDiv1 a{
+      font-size: 0.9rem;
+  }
+}
+
+#innerNavDiv2 input{
+  height: 2.25rem;
+  width: 16rem;
+  padding: 6px 12px;
+  border: 1px solid gray;
+  font-size: 1rem;
+  margin-right: 0.25rem;
+  border-radius: 0.5rem;
+}
+
+#innerNavDiv2 input:hover{
+  box-shadow: 0 0 3px 2px rgb(58, 58, 228);
+  border: 1px solid gray;
+}
+
+#innerNavDiv2 button{
+  height: 2.25rem;
+  width: 5.5rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #198754;
+  background: none;
+  color: #198754;
+}
+
+#innerNavDiv2 button:hover{
+  color: white;
+  background-color: #198754;
+  animation: colorChange 0.25s ease-in 0s 1 normal;
+}
+
+@keyframes colorChange {
+  0%{
+      color: #198754;
+      background-color: white;
+  }
+  100%{
+      color: white;
+      background-color: #198754;
+  }
+}
+
+#innerNavDiv3 ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: auto 1rem;
+  padding-left: 0;
+  font-size: 1.20rem;
+}
+
+#innerNavDiv3 ul li{
+  list-style: none;
+}
+
+#innerNavDiv3 ul li a{
+  text-decoration: none;
+  color: black;
+}
+
+#innerNavDiv3 ul #navUsername{
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+#main1{
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  /* gap: 4rem; */
+}
+
+#main2{
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+#main2 button{
+  font-size: 1.75rem;
+  margin-right: 0.75rem;
+  height: 2.475rem;
+  width: 3.475rem;
+  border-radius: 0.5rem;
+  background: none;
+  border: 1px solid gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media(max-width: 370px){
+  #main2 button{
+      font-size: 1.25rem;
+      height: 2.0rem;
+      width: 2.7rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+}
+
+#main2 button:hover{
+  box-shadow: 0 0 3px 2px rgb(58, 58, 228);
+}
+
+#main2 button i{
+  font-weight: 600;
+}
+
+@media(max-width: 1050px){
+  #main1{
+      display: none;
+  }
+  #main2{
+      display: flex;
+  }
+}
+
+#sidebar{
+  display: none;  /*flex*/
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 100%;
+  background-color: rgba(239, 234, 234, 0.5);
+  backdrop-filter: blur(10px);
+  border: none;
+  z-index: 3;
+}
+
+#innerNavDiv4 button{
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  margin-left: 21rem;
+  font-size: 1.75rem;
+  background: none;
+  border: none;
+}
+
+#innerNavDiv4 button:hover{
+  box-shadow: 0 0 3px 2px rgb(6 6 227);
+  border-radius: 0.25rem;
+}
+
+#innerNavDiv4 button i{
+  font-weight: 600;
+}
+
+#innerNavDiv5 ul{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1.25rem;
+  font-size: 1.20rem;
+  padding-left: 0;
+  margin-left: 2rem;
+}
+
+#innerNavDiv5 ul li{
+  list-style: none;
+}
+
+#innerNavDiv5 ul li a{
+  text-decoration: none;
+  color: black;
+}
+
+#innerNavDiv5 ul #username{
+  font-weight: bold;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+#innerNavDiv6{
+  margin-left: 2rem;
+}
+
+#innerNavDiv6 input{
+  height: 2.25rem;
+  width: 12rem;
+  padding: 6px 12px;
+  border: 1px solid gray;
+  font-size: 1rem;
+  margin-right: 0.25rem;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#innerNavDiv6 button{
+  height: 2.25rem;
+  width: 5.5rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #198754;
+  background: none;
+  color: #198754;
+}
+
+#innerNavDiv6 button:hover{
+  color: white;
+  background-color: #198754;
+  animation: colorChange 0.25s ease-in 0s 1 normal;
+}
+
+@keyframes colorChange {
+  0%{
+      color: #198754;
+      background-color: white;
+  }
+  100%{
+      color: white;
+      background-color: #198754;
+  }
+}
+
+@media(max-width: 400px){
+  #sidebar{
+      width: 100%;
+  }
+  #innerNavDiv4 button{
+      margin-left: 75vw;
+  }
+  #innerNavDiv6 input{
+      width: 40vw;
+  }
+  #innerNavDiv6 button{
+      width: 25vw;
+      font-size: 4vw;
+  }
+  #innerNavDiv5 ul{
+      margin-left: 9vw;
+  }
+  #innerNavDiv6{
+      margin-left: 9vw;
+  }
+}
+
+@keyframes movingSidebarIn {
+  0%{
+      width: 0;
+  }
+  100%{
+      width: 400px;
+  }
+}

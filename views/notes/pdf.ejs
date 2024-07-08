@@ -1,0 +1,88 @@
+<% layout("/layouts/boilerplate") %>
+<style>
+    #iframe{
+        width: 85%;
+        height: 700px;
+        text-align: center;
+    }
+    #pdfDiv{
+        text-align: center;
+    }
+</style>
+<body>
+    <div id="pdfDiv">
+        <% if(unit == "1-Thermal-Science-4"){
+            url = "https://pdf.ac/38IEet#toolbar=0";
+        } else if(unit == "1-Thermal-Science-1"){
+            url = "https://pdf.ac/3tsLWl#toolbar=0";
+        } else if(unit == "1-Thermal-Science-2"){
+            url = "https://pdf.ac/1pGI5V#toolbar=0";
+        } else if(unit == "1-Thermal-Science-3"){
+            url = "https://pdf.ac/36fCev#toolbar=0";
+        } else if(unit == "1-Electrical-1"){
+            url = "https://pdf.ac/28MKW2#toolbar=0";
+        } else if(unit == "1-Electrical-2"){
+            url = "https://pdf.ac/z4GPz#toolbar=0";
+        } else if(unit == "1-Electrical-3"){
+            url = "https://pdf.ac/10q12M#toolbar=0";
+        } else if(unit == "1-Electrical-4"){
+            url = "https://pdf.ac/2Mhg7R#toolbar=0";
+        } else if(unit == "1-Chemistry-1"){
+            url = "https://pdf.ac/1Jmrny#toolbar=0";
+        } else if(unit == "1-Chemistry-2"){
+            url = "https://pdf.ac/3qe6gP#toolbar=0";
+        } else if(unit == "1-Chemistry-3"){
+            url = "https://pdf.ac/LrdWV#toolbar=0";
+        } else if(unit == "1-Chemistry-4"){
+            url = "https://pdf.ac/12UPXP#toolbar=0";
+        } else if(unit == "1-Chemistry-Lab-1"){
+            url = "https://pdf.ac/2kOvmb#toolbar=0";
+        } else if(unit == "1-Physics-Lab-1"){
+            url = "https://pdf.ac/1znhUL#toolbar=0";
+        } else if(unit == "1-Applied-Mathematics-2-1"){
+            url = "https://pdf.ac/2CQxmc#toolbar=0"
+        } else if(unit == "1-Applied-Mathematics-2-2"){
+            url = "https://pdf.ac/1TKxgC#toolbar=0";
+        } else if(unit == "1-Applied-Mathematics-2-3"){
+            url = "https://pdf.ac/21gAiR#toolbar=0";
+        } else if(unit == "1-Applied-Mathematics-2-4"){
+            url = "https://pdf.ac/wzjqG#toolbar=0";
+        } else if(unit == "1-Applied-Mathematics-1-1"){
+            url = "https://pdf.ac/T7j3L#toolbar=0";
+        } else if(unit == "1-Applied-Mathematics-1-2"){
+            url = "https://pdf.ac/2iNWcY#toolbar=0";
+        } else if(unit == "1-Applied-Mathematics-1-3"){
+            url = "https://pdf.ac/O6E8B#toolbar=0";
+        } else if(unit == "1-Applied-Mathematics-1-4"){
+            url = "https://pdf.ac/1pGDqT#toolbar=0";
+        } else if(unit == "1-Electronics-1"){
+            url = "https://pdf.ac/3jri5L#toolbar=0";
+        } else if(unit == "1-Electronics-2"){
+            url = "https://pdf.ac/2sPjf8#toolbar=0";
+        } else if(unit == "1-Electronics-3"){
+            url = "https://pdf.ac/2WTjnG#toolbar=0";
+        } else if(unit == "1-Electronics-4"){
+            url = "https://pdf.ac/1kFZCf#toolbar=0";
+        } else if(unit == "1-Physics-1"){
+            url = "https://pdf.ac/36UG05#toolbar=0";
+        } else if(unit == "1-Physics-2"){
+            url = "https://pdf.ac/3Gi3ki#toolbar=0";
+        } else if(unit == "1-Physics-3"){
+            url = "https://pdf.ac/1YLlr2#toolbar=0";
+        } else if(unit == "1-Physics-4"){
+            url = "https://pdf.ac/2ljlK5#toolbar=0";
+        } else if(unit == "1-Physics-5"){
+            url = "https://pdf.ac/BA0jW#toolbar=0";
+        } else if(unit == "1-Mechanics-1"){
+            url = "https://pdf.ac/28VMXS#toolbar=0";
+        } else if(unit == "1-Mechanics-2"){
+            url = "https://pdf.ac/2WTHC4#toolbar=0";
+        } else if(unit == "1-Mechanics-3"){
+            url = "https://pdf.ac/2UomRb#toolbar=0";
+        } else if(unit == "1-Mechanics-4"){
+            url = "https://pdf.ac/3jrL3P#toolbar=0";
+        }
+        %>
+        <iframe src=<%=url%> frameborder="0" id="iframe"></iframe>
+    </div>
+</body>

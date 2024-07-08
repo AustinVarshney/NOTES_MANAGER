@@ -1,0 +1,26 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    <h2  id="h2Login">Login Form</h2>
+    <form action="/login" method="post" id="formLogin" class="needs-validation" novalidate>
+        <div class="innerLoginDiv1 form-floating">
+            <input type="text" placeholder="Username" name="username" class="username form-control" id="floatingUsername" required>
+            <label for="floatingUsername">Username</label>
+            <div class="invalid-feedback">
+                Please write your Username
+            </div>
+        </div>
+        <div class="innerLoginDiv1 form-floating">
+            <input type="password" placeholder="Password" name="password" class="password form-control" id="floatingPassword" required>
+            <label for="floatingPassword">Password</label>
+            <div class="invalid-feedback">
+                Please write your Password
+            </div>
+        </div>
+        <div>
+            <button class="btn btn-success btnSignup">Login</button>
+        </div>
+    </form>
+    <div id="linkLogin">
+        <a href="/signup">Click Here for SignUp</a>
+    </div>
+</body>

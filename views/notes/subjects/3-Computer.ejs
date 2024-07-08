@@ -1,0 +1,74 @@
+<% layout("./layouts/boilerplate") %>
+<body>
+    <h3 class="h3Branch">Please Choose Subject</h3>
+    <div class="outerSubjectDiv" id="outerSubjectContainer">
+        <% let arr = ["Microprocessor-Theory-&-Applications","Operating-Systems","Software-Engineering","Communication-Systems","Engineering-Economy-&-Management","Digital-Electronics","Theory-of-Computation","Computer-Networks","Computer-Graphics"] %>
+        <% for(i=0; i<arr.length; i++){ %>
+            <div class="innerSubjectDiv">
+                <h4><%=arr[i]%></h4>
+                <form action="/note/<%=year%>/<%=branch%>/<%=arr[i]%>">
+                    <button>VIEW</button>
+                </form>
+            </div>
+        <% } %>
+    </div>
+
+    <script>
+        const subjects = <%- JSON.stringify(arr) %>;
+        let btn1 = document.getElementById("searchItem1");
+        let inp1 = document.getElementById("searchInputBox1");
+        let btn2 = document.getElementById("searchItem2");
+        let inp2 = document.getElementById("searchInputBox2");
+        const year = "<%= year %>";
+        const branch = "<%= branch %>";
+        const outerSubjectContainer = document.getElementById("outerSubjectContainer");
+
+        function renderSubjects(filteredArray){
+            outerSubjectContainer.innerHTML = "";
+            filteredArray.forEach(subject => {
+                const subjectDiv = document.createElement("div");
+                subjectDiv.className = "innerSubjectDiv";
+
+                const h4 = document.createElement("h4");
+                h4.textContent = subject;
+                subjectDiv.appendChild(h4);
+
+                const form = document.createElement("form");
+                form.action = `/note/${year}/${branch}/${subject}`;
+                const button = document.createElement("button");
+                button.textContent = "VIEW";
+                form.appendChild(button);
+
+                subjectDiv.appendChild(form);
+                outerSubjectContainer.appendChild(subjectDiv);
+            })
+        }
+
+        function filterSubjects1(){
+            const query = inp1.value.toLowerCase();
+            const filteredArray = subjects.filter((el) => el.toLowerCase().includes(query));
+            renderSubjects(filteredArray);
+        }
+        function filterSubjects2(){
+            const query = inp2.value.toLowerCase();
+            const filteredArray = subjects.filter((el) => el.toLowerCase().includes(query));
+            renderSubjects(filteredArray);
+        }
+
+        //Initial Render
+        renderSubjects(subjects);
+
+        // Attach event listener to search box
+        inp1.addEventListener("input", filterSubjects1);
+        inp2.addEventListener("input", filterSubjects2);
+
+        btn1.addEventListener("click", function(event){
+            event.preventDefault();
+            inp.setAttribute("value", inp1.value);
+        })
+        btn2.addEventListener("click", function(event){
+            event.preventDefault();
+            inp.setAttribute("value", inp2.value);
+        })
+    </script>
+</body>

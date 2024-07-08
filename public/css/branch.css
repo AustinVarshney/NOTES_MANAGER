@@ -1,0 +1,38 @@
+.outerBranchDiv{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.innerBranchDiv{
+    display: flex;
+    height: 5rem;
+    width: 45%;
+    border: 1px solid black;
+    border-radius: 0.75rem;
+    margin: 0.25rem 0 1rem 0;
+    align-items: center;
+    justify-content: space-around;
+    background-color: black;
+}
+
+.innerBranchDiv button:hover{
+    background-color: #2f3536cb;
+}
+
+.innerBranchDiv button{
+    height: 5rem;
+    width: 100%;
+    border-radius: 0.75rem;
+    font-size: 1.4rem;
+    text-align: center;
+    background-color: black;
+    border: none;
+    color: white;
+}
+
+.h3Branch{
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 2rem;
+}

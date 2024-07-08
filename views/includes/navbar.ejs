@@ -1,0 +1,59 @@
+<nav class="outerNav">
+  <div id="innerNavDiv1">
+      <a href="#">AMU_NOTES_MANAGER</a>
+  </div>
+  <div id="main1">
+      <div id="innerNavDiv2">
+          <input type="text" placeholder="Type to Search" id="searchInputBox1">
+          <button><i class="fa-solid fa-magnifying-glass" id="searchItem1"></i>&nbsp;Search</button>
+      </div>
+      <div id="innerNavDiv3">
+          <ul>
+              <% if(currUser){ %>
+                <li id="navUsername">@<%=currUser.username%></li>
+              <% } %>
+              <% if(!currUser){ %>
+                <li id="navUsername"></li>
+              <% } %>
+              <li><a href="/note">Home</a></li>
+              <% if(!currUser){ %>
+                <li><a href=/signup>SignUp</a></li>
+                <li><a href="/login">Login</a></li>
+              <%}%>
+              <% if(currUser){ %>
+                <li><a href="/logout">Logout</a></li>
+              <%}%>
+          </ul>
+      </div>
+  </div>
+  <div id="main2">
+      <button id="bars"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</nav>
+<div id="sidebar">
+  <div id="innerNavDiv4">
+      <button id="cross"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div id="innerNavDiv5"> 
+      <ul>
+          <% if(currUser){ %>
+            <li id="username">@<%=currUser.username%></li>
+          <% } %>
+          <% if(!currUser){ %>
+            <li id="username"></li>
+          <% } %>
+          <li><a href="/note">Home</a></li>
+          <% if(!currUser){ %>
+            <li><a href="/signup">SignUp</a></li>
+            <li><a href="/login">Login</a></li>
+          <%}%>
+          <% if(currUser){ %>
+            <li><a href="/logout">Logout</a></li>
+          <%}%>
+      </ul>
+  </div>
+  <div id="innerNavDiv6">
+      <input type="text" placeholder="Type to Search" id="searchInputBox2">
+      <button><i class="fa-solid fa-magnifying-glass" id="searchItem2"></i>&nbsp;Search</button>
+  </div>
+</div>

@@ -1,0 +1,51 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    <div class="outerLinkDiv">
+        <div class="innerFirstLinkDiv">
+            <h3>Instructions about getting a link</h3>
+        </div>
+        <div class="innerSecondLinkDiv">
+            <ol>
+                <li>Make PDF &nbsp;<i class="fa-regular fa-file-pdf"></i>&nbsp; of your notes without any filter.</li>
+                <li>Upload it in your Google Drive &nbsp;<i class="fa-brands fa-google-drive"></i></li>
+                <li>On the Top Right corner of the PDF in Google Drive, click on &nbsp;<i class="fa-solid fa-ellipsis-vertical"></i></li>
+                <li>Then click on <b>Manage access</b> option and click on <b>Restricted option</b> and change it to <b><u>Anyone with the link option</u></b>.</li>
+                <li>Then get its link by clicking on &nbsp;<i class="fa-solid fa-link"></i>&nbsp; or the <b>Copy Link</b> option.</li>
+                <li>Link is copied and paste it in the form attached below.</li>
+            </ol>
+        </div>
+    </div>
+    <div class="outerFormLinkDiv">
+        <h4>Please fill the form if you want to share your notes of this branch and year. Before filling, please read the above Instructions carefully.</h4>
+        <form action="/note/<%=year%>/<%=branch%>/<%=subject%>" method="post" class="needs-validation" novalidate>
+            <div class="innerFormLinkDiv">
+                <div class="form-floating innerFooterDiv1">
+                    <input type="text" placeholder="Name" name="name" class="name form-control" id="floatingName" required>
+                    <label for="floatingName">Name</label>
+                    <div class="invalid-feedback">
+                        Please write your name
+                    </div>
+                </div>
+                <div class="form-floating innerFooterDiv1">
+                    <input type="text" placeholder="Unit Number" name="unit" class="unit_number form-control" id="floatingNum" required>
+                    <label for="floatingNum">Unit Number</label>
+                    <div class="invalid-feedback">
+                        Please mention Unit Number
+                    </div>
+                </div>
+            </div>
+            <div class="innerFormLinkDiv">
+                <div class="input-group innermostFormLinkDiv">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Attach Link Here</span>
+                    <input type="text" class="form-control" name="link" required>
+                    <div class="invalid-feedback">
+                        Please provide the URL of the document
+                    </div>
+                </div>
+            </div>
+            <div class="outerFooterDiv2">
+                <button class="footerButton btn btn-outline-success">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>

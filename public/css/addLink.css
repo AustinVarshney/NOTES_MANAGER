@@ -1,0 +1,40 @@
+.outerLinkDiv{
+    border: 3.5px solid rgb(242, 53, 53);
+    margin-bottom: 1rem;
+    background-color: rgb(255, 116, 116);
+}
+
+.innerFirstLinkDiv{
+    margin: 0 0 0.25rem 0;
+}
+
+.innerFirstLinkDiv h3{
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.innerSecondLinkDiv{
+    margin: 1rem 0 0 1rem;
+}
+
+.innerSecondLinkDiv ol li{
+    font-size: 1.25rem;
+}
+
+.innermostFormLinkDiv{
+    width: 93.5%;
+}
+
+.outerFormLinkDiv{
+    margin-bottom: 0;
+}
+
+.innerFormLinkDiv{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 1.45rem;
+}
+
+.outerFormLinkDiv h4{
+    text-align: center;
+}

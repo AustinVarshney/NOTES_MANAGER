@@ -1,0 +1,42 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    <div class="outerUnitDiv">
+        
+        <%if(year == 1){
+            if(subject == "Thermal-Science"){
+                arr = [`/note/${year}/${branch}/${subject}/${year}-${subject}-1`,`/note/${year}/${branch}/${subject}/${year}-${subject}-2`,`/note/${year}/${branch}/${subject}/${year}-${subject}-3`,`/note/${year}/${branch}/${subject}/${year}-${subject}-4`]
+            }else if(subject == "Electrical"){
+                arr = [`/note/${year}/${branch}/${subject}/${year}-${subject}-1`,`/note/${year}/${branch}/${subject}/${year}-${subject}-2`,`/note/${year}/${branch}/${subject}/${year}-${subject}-3`,`/note/${year}/${branch}/${subject}/${year}-${subject}-4`]; 
+            }else if(subject == "Chemistry"){
+                arr = [`/note/${year}/${branch}/${subject}/${year}-${subject}-1`,`/note/${year}/${branch}/${subject}/${year}-${subject}-2`,`/note/${year}/${branch}/${subject}/${year}-${subject}-3`,`/note/${year}/${branch}/${subject}/${year}-${subject}-4`]
+            }else if(subject == "Chemistry-Lab"){
+                arr = [`/note/${year}/${branch}/${subject}/${year}-${subject}-1`]
+            }else if(subject == "Physics-Lab"){
+                arr = [`/note/${year}/${branch}/${subject}/${year}-${subject}-1`]
+            }else if(subject == "Electronics"){
+                arr = [`/note/${year}/${branch}/${subject}/${year}-${subject}-1`, `/note/${year}/${branch}/${subject}/${year}-${subject}-2`,`/note/${year}/${branch}/${subject}/${year}-${subject}-3`,`/note/${year}/${branch}/${subject}/${year}-${subject}-4`];
+            }else if(subject == "Mechanics"){
+                arr = [`/note/${year}/${branch}/${subject}/${year}-${subject}-1`, `/note/${year}/${branch}/${subject}/${year}-${subject}-2`,`/note/${year}/${branch}/${subject}/${year}-${subject}-3`,`/note/${year}/${branch}/${subject}/${year}-${subject}-4`];
+            }else if(subject == "Physics"){
+                arr = [`/note/${year}/${branch}/${subject}/${year}-${subject}-1`, `/note/${year}/${branch}/${subject}/${year}-${subject}-2`,`/note/${year}/${branch}/${subject}/${year}-${subject}-3`,`/note/${year}/${branch}/${subject}/${year}-${subject}-4`,`/note/${year}/${branch}/${subject}/${year}-${subject}-5`];
+            }else if(subject == "Applied-Mathematics-1"){
+                arr = [`/note/${year}/${branch}/${subject}/${year}-${subject}-1`, `/note/${year}/${branch}/${subject}/${year}-${subject}-2`,`/note/${year}/${branch}/${subject}/${year}-${subject}-3`,`/note/${year}/${branch}/${subject}/${year}-${subject}-4`];
+            }else if(subject == "Applied-Mathematics-2"){
+                arr = [`/note/${year}/${branch}/${subject}/${year}-${subject}-1`, `/note/${year}/${branch}/${subject}/${year}-${subject}-2`,`/note/${year}/${branch}/${subject}/${year}-${subject}-3`,`/note/${year}/${branch}/${subject}/${year}-${subject}-4`]
+            }else{
+                arr = [`/note/${year}/${branch}/${subject}/1`, `/note/${year}/${branch}/${subject}/2`,`/note/${year}/${branch}/${subject}/3`,`/note/${year}/${branch}/${subject}/4`];
+            }
+        }else{
+            arr = [`/note/${year}/${branch}/${subject}/1`, `/note/${year}/${branch}/${subject}/2`,`/note/${year}/${branch}/${subject}/3`,`/note/${year}/${branch}/${subject}/4`];
+        }%>
+
+    <% for(i=0; i<arr.length; i++){ %>
+        <div class="innerUnitDiv">
+            <h4>Unit-<%=(i+1)%></h4>
+            <form action=<%=arr[i]%>>
+                <button>OPEN</button>
+            </form>
+        </div>        
+    <% } %>
+    </div>
+</body>

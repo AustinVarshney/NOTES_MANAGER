@@ -1,0 +1,43 @@
+<style>
+    .successFlash{
+        font-size: 1.25rem;
+        margin: 1rem 6rem -0.25rem 6rem;
+        border: 1px solid #00b316;
+        background-color: #d6f3d6;
+        padding: 0.1rem;
+        color: #003f05;
+        text-align: center;   
+    }
+    @media(max-width: 537px){
+        .successFlash{
+            font-size: 1rem;
+        }
+    }
+
+    .errorFlash{
+        font-size: 1.25rem;
+        margin: 1rem 6rem -0.25rem 6rem;
+        border: 1px solid #b30000;
+        background-color: #f3d6d6;
+        padding: 0.1rem;
+        color: #3f0300;
+        text-align: center;   
+    }
+    @media(max-width: 537px){
+        .errorFlash{
+            font-size: 1rem;
+        }
+    }
+</style>
+
+<% if(success && success.length){ %>
+    <div class="alert successFlash">
+        <i class="fa-solid fa-circle-check"></i>&nbsp;<%= success %>
+    </div>
+<% } %>
+
+<% if(error && error.length){ %>
+    <div class="alert errorFlash">
+        <i class="fa-solid fa-triangle-exclamation"></i>&nbsp;<%= error %>
+    </div>
+<% } %>
